@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ward",
+  "version": "1.0",
+  "description": "Drop a ward anywhere so you can come back!",
+  "icons": { "128": "logo.png" },
+
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "storage"
+  ],
+
+  "content_security_policy":
+  "script-src 'unsafe-inline' https://apis.google.com; object-src 'self'",
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/demo.png"
+  },
+
+  "background": {
+    "scripts": [
+      "js/background.js",
+      "js/popup.js"
+    ],
+    "persistent": false
+  }
+  
+}
